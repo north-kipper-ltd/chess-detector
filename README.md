@@ -11,4 +11,5 @@
 - [Resources to learn Kotlin](https://developer.android.com/kotlin/resources)
 - [Android relatd artices](https://medium.com/androiddevelopers/tagged/kotlin)
 - [Kotlin language reference](https://kotlinlang.org/docs/reference/)
-
+- [AR core](https://developers.google.com/ar/discover/)
+- [Stockfish](https://stockfishchess.org/)
