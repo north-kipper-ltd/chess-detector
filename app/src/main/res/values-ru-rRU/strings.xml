@@ -3,4 +3,6 @@
     <string name="app_name">ChessDetector</string>
     <string name="action_settings">Настройки</string>
     <string name="section_format">Привет, Андроид!</string>
+    <string name="action_about">О программе</string>
+    <string name="button_open_camera">Сканировать шахматную доску</string>
 </resources>

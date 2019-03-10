@@ -16,6 +16,10 @@ import android.view.ViewGroup
   
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_main.view.*
+import android.provider.MediaStore
+import android.content.Intent
+import android.hardware.Camera
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,8 +46,10 @@ class MainActivity : AppCompatActivity() {
         container.adapter = mSectionsPagerAdapter
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+
+            // start the image capture Intent
+            startActivityForResult(intent, 1337)
         }
   
     }
@@ -66,6 +72,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         return super.onOptionsItemSelected(item)
+    }
+
+    /** A safe way to get an instance of the Camera object. */
+    fun getCameraInstance(): Camera? {
+        return try {
+            Camera.open() // attempt to get a Camera instance
+        } catch (e: Exception) {
+            // Camera is not available (in use or does not exist)
+            null // returns null if camera is unavailable
+        }
     }
   
 
