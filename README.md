@@ -1,6 +1,8 @@
 # HOW TO
 
 - Install [Android Studio](https://developer.android.com/studio/)
+- Import project, try to build and run it on Emulator
+- Ideally, you should be able to run it on your own device
 
 
 # Useful links:
