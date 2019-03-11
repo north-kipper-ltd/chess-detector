@@ -71,6 +71,11 @@ class MainActivity : AppCompatActivity() {
             return true
         }
 
+        if (id == R.id.action_about){
+            setContentView(R.layout.about_main)
+            return true
+        }
+
         return super.onOptionsItemSelected(item)
     }
 
