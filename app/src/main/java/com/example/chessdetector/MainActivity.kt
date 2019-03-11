@@ -1,12 +1,10 @@
 package com.example.chessdetector
 
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
    
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import androidx.viewpager.widget.ViewPager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
@@ -68,11 +66,12 @@ class MainActivity : AppCompatActivity() {
         val id = item.itemId
 
         if (id == R.id.action_settings) {
+            setContentView(R.layout.preferences)
             return true
         }
 
         if (id == R.id.action_about){
-            setContentView(R.layout.about_main)
+            setContentView(R.layout.about)
             return true
         }
 
