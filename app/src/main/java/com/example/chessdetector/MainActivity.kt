@@ -65,14 +65,9 @@ class MainActivity : AppCompatActivity() {
         // as you specify a parent activity in AndroidManifest.xml.
         val id = item.itemId
 
-        if (id == R.id.action_settings) {
-            setContentView(R.layout.preferences)
-            return true
-        }
-
-        if (id == R.id.action_about){
-            setContentView(R.layout.about)
-            return true
+        when (id){
+            R.id.action_settings -> setContentView(R.layout.settings)
+            R.id.action_about -> setContentView(R.layout.about)
         }
 
         return super.onOptionsItemSelected(item)
