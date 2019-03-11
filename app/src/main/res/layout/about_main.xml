@@ -28,17 +28,26 @@
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
-    <androidx.viewpager.widget.ViewPager
-            android:id="@+id/container"
+    <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="666dp"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            android:layout_height="753dp" app:layout_anchorGravity="bottom|center" app:layout_anchor="@+id/appbar"
+            android:id="@+id/scrollView3">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical"/>
+    </ScrollView>
     <EditText
-            android:layout_width="246dp"
-            android:layout_height="215dp"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:text="North Kipper Ltd"
             android:ems="10"
-            android:id="@+id/editText" app:layout_anchorGravity="left|center" app:layout_anchor="@+id/container"/>
+            android:id="@+id/editText8" app:layout_anchorGravity="left|center" app:layout_anchor="@+id/scrollView3"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Version 0.0.0.0"
+            android:ems="10"
+            android:id="@+id/editText9" app:layout_anchorGravity="right|center" app:layout_anchor="@+id/scrollView3"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
