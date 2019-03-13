@@ -38,7 +38,7 @@
     <TextView
             android:text="North Kipper Ltd"
             android:layout_width="182dp"
-            android:layout_height="53dp" android:id="@+id/textView7" app:layout_anchorGravity="left|center"
+            android:layout_height="53dp" android:id="@+id/textView7" app:layout_anchorGravity="center"
             app:layout_anchor="@+id/scrollView3"/>
     <TextView
             android:text="Version 0.0.0.0"

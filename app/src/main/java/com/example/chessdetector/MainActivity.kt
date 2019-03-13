@@ -1,7 +1,7 @@
 package com.example.chessdetector
 
 import androidx.appcompat.app.AppCompatActivity
-   
+
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -11,7 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-  
+
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_main.view.*
 import android.provider.MediaStore
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             // start the image capture Intent
             startActivityForResult(intent, 1337)
         }
-  
+
     }
 
 
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
         // as you specify a parent activity in AndroidManifest.xml.
         val id = item.itemId
 
-        when (id){
+        when (id) {
             R.id.action_settings -> setContentView(R.layout.settings)
             R.id.action_about -> setContentView(R.layout.about)
         }
@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
             null // returns null if camera is unavailable
         }
     }
-  
+
 
     /**
      * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -107,8 +107,10 @@ class MainActivity : AppCompatActivity() {
      */
     class PlaceholderFragment : Fragment() {
 
-        override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                                  savedInstanceState: Bundle?): View? {
+        override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+        ): View? {
             val rootView = inflater.inflate(R.layout.fragment_main, container, false)
             rootView.section_label.text = getString(R.string.section_format, arguments?.getInt(ARG_SECTION_NUMBER))
             return rootView
