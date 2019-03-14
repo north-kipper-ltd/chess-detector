@@ -15,3 +15,8 @@
 - [Kotlin language reference](https://kotlinlang.org/docs/reference/)
 - [AR core](https://developers.google.com/ar/discover/)
 - [Stockfish](https://stockfishchess.org/)
+
+# Guides:
+
+- https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/java/demo
+- https://www.tensorflow.org/lite/guide/android
