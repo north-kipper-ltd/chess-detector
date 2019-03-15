@@ -1,11 +1,42 @@
-# HOW TO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### HOW TO
 
 - Install [Android Studio](https://developer.android.com/studio/)
 - Import project, try to build and run it on Emulator
 - Ideally, you should be able to run it on your own device
 
 
-# Useful links:
+### Useful links:
 
 - [API reference](https://developer.android.com/reference/)
 - [Android Jetpack](https://developer.android.com/jetpack)
@@ -16,7 +47,7 @@
 - [AR core](https://developers.google.com/ar/discover/)
 - [Stockfish](https://stockfishchess.org/)
 
-# Guides:
+### Guides:
 
 - https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/java/demo
 - https://www.tensorflow.org/lite/guide/android
