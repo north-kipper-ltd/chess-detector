@@ -13,21 +13,19 @@
 
 
 
+# Chess Detector
+
+A tool, that detected chessboard with figures on it and provides several next moves
+
+Features:
+
+* 
+
+* 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+## Appendix
 
 ### HOW TO
 
