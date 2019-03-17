@@ -5,4 +5,8 @@
     <string name="section_format">Привет, Андроид!</string>
     <string name="action_about">О программе</string>
     <string name="button_open_camera">Сканировать шахматную доску</string>
+    <string name="about_creator">Создатель: North Kipper Ltd</string>
+    <string name="about_text">Это приложение позволяет Вам узнать какой ход нужно сделать для победы.
+        Вы можете использовать как готовую фотографию, так и сделать снимок прямо сейчас.
+    </string>
 </resources>

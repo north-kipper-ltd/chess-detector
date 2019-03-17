@@ -4,4 +4,8 @@
     <string name="section_format">Hello, Android!</string>
     <string name="action_about">About</string>
     <string name="button_open_camera">Scan Chess Grid</string>
+    <string name="about_creator">Created by North Kipper Ltd</string>
+    <string name="about_text">This application allows you to find out which move you need to make to win.
+        You can use both a finished photo and take a picture right now.
+    </string>
 </resources>

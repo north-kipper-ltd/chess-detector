@@ -26,19 +26,12 @@
                 app:layout_scrollFlags="scroll|enterAlways">
 
         </androidx.appcompat.widget.Toolbar>
+        <Switch
+                android:text="Switch"
+                android:layout_width="match_parent"
+                android:layout_height="54dp" android:id="@+id/switch3" android:layout_weight="1"
+        />
 
     </com.google.android.material.appbar.AppBarLayout>
-    <androidx.viewpager.widget.ViewPager
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="666dp"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-    <EditText
-            android:layout_width="246dp"
-            android:layout_height="215dp"
-            android:inputType="textPersonName"
-            android:text="North Kipper Ltd"
-            android:ems="10"
-            android:id="@+id/editText" app:layout_anchorGravity="left|center" app:layout_anchor="@+id/container"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
