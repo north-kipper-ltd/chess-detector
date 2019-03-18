@@ -8,4 +8,5 @@
     <string name="about_text">This application allows you to find out which move you need to make to win.
         You can use both a finished photo and take a picture right now.
     </string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
 </resources>

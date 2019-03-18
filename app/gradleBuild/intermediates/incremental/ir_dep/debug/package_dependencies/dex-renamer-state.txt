@@ -1,0 +1,4 @@
+#Mon Mar 18 18:38:17 GMT 2019
+base.0=C\:\\Users\\peric\\Documents\\GitHub\\chess-detector\\app\\gradleBuild\\intermediates\\transforms\\dexMerger\\debug\\10
+path.0=classes.dex
+renamed.0=classes.dex

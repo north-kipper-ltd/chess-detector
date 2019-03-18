@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\peric\\Documents\\GitHub\\chess-detector\\app\\gradleBuild\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ru-rRU\\values-ru-rRU.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\peric\\Documents\\GitHub\\chess-detector\\app\\src\\main\\res\\values-ru-rRU\\strings.xml",
+                    "from": {
+                        "startLines": "7,8,5,3,2,6,4",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "355,426,225,109,57,279,164",
+                        "endLines": "7,10,5,3,2,6,4",
+                        "endColumns": "69,13,52,53,50,74,59",
+                        "endOffsets": "420,629,273,158,103,349,219"
+                    },
+                    "to": {
+                        "startLines": "2,3,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,331,384,438,489,564",
+                        "endLines": "2,5,6,7,8,9,10",
+                        "endColumns": "69,13,52,53,50,74,59",
+                        "endOffsets": "120,326,379,433,484,559,619"
+                    }
+                }
+            ]
+        }
+    ]
+}
