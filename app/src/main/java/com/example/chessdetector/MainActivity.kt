@@ -1,22 +1,16 @@
 package com.example.chessdetector
 
+import android.content.Intent
+import android.hardware.Camera
+import android.os.Bundle
+import android.provider.MediaStore
+import android.view.*
 import androidx.appcompat.app.AppCompatActivity
-
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
-
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_main.view.*
-import android.provider.MediaStore
-import android.content.Intent
-import android.hardware.Camera
 
 
 class MainActivity : AppCompatActivity() {
@@ -66,8 +60,14 @@ class MainActivity : AppCompatActivity() {
         val id = item.itemId
 
         when (id) {
-            R.id.action_settings -> setContentView(R.layout.settings)
-            R.id.action_about -> setContentView(R.layout.about)
+            R.id.action_settings -> {
+                val intent = Intent(this, SettingsActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.action_about -> {
+                val intent = Intent(this, AboutActivity::class.java)
+                startActivity(intent)
+            }
         }
 
         return super.onOptionsItemSelected(item)
