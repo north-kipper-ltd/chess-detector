@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_main.view.*
+import android.widget.ImageView
 
 
 class MainActivity : AppCompatActivity() {
@@ -42,6 +43,15 @@ class MainActivity : AppCompatActivity() {
 
             // start the image capture Intent
             startActivityForResult(intent, 1337)
+        }
+
+        val balck_pawn = R.drawable.black_pawn
+        val white_queen = R.drawable.white_queen
+        val qwerty = findViewById(R.id.a8) as ImageView
+        // set on-click listener
+        qwerty.setOnClickListener {
+            // your code to perform when the user clicks on the ImageView
+            qwerty.setBackgroundColor(31337)
         }
 
     }
@@ -107,33 +117,33 @@ class MainActivity : AppCompatActivity() {
      */
     class PlaceholderFragment : Fragment() {
 
-        override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
-        ): View? {
-            val rootView = inflater.inflate(R.layout.fragment_main, container, false)
-            rootView.section_label.text = getString(R.string.section_format, arguments?.getInt(ARG_SECTION_NUMBER))
-            return rootView
-        }
-
-        companion object {
-            /**
-             * The fragment argument representing the section number for this
-             * fragment.
-             */
-            private val ARG_SECTION_NUMBER = "section_number"
-
-            /**
-             * Returns a new instance of this fragment for the given section
-             * number.
-             */
-            fun newInstance(sectionNumber: Int): PlaceholderFragment {
-                val fragment = PlaceholderFragment()
-                val args = Bundle()
-                args.putInt(ARG_SECTION_NUMBER, sectionNumber)
-                fragment.arguments = args
-                return fragment
+            override fun onCreateView(
+                inflater: LayoutInflater, container: ViewGroup?,
+                savedInstanceState: Bundle?
+            ): View? {
+                val rootView = inflater.inflate(R.layout.fragment_main, container, false)
+                rootView.section_label.text = getString(R.string.section_format, arguments?.getInt(ARG_SECTION_NUMBER))
+                return rootView
             }
-        }
+
+            companion object {
+                /**
+                 * The fragment argument representing the section number for this
+                 * fragment.
+                 */
+                private val ARG_SECTION_NUMBER = "section_number"
+
+                /**
+                 * Returns a new instance of this fragment for the given section
+                 * number.
+                 */
+                fun newInstance(sectionNumber: Int): PlaceholderFragment {
+                    val fragment = PlaceholderFragment()
+                    val args = Bundle()
+                    args.putInt(ARG_SECTION_NUMBER, sectionNumber)
+                    fragment.arguments = args
+                    return fragment
+                }
+            }
     }
 }
