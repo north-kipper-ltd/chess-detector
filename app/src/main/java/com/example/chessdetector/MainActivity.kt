@@ -1,5 +1,6 @@
 package com.example.chessdetector
 
+import android.content.ClipData
 import android.content.Intent
 import android.hardware.Camera
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.provider.MediaStore
 import android.util.Log
 import android.view.*
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -85,8 +87,6 @@ class MainActivity : AppCompatActivity() {
         val firsts = cells.slice(56..63)
 
         val next_cells = mutableListOf(eights, seventh, sixth, fifth, fourth, threes, twos, firsts)
-        Log.d("TAG", "31337")
-        Log.d("TAG", "$next_cells")
 
         fun set_cells(cell: Int, value: Char) {
             when (value) {
@@ -110,7 +110,6 @@ class MainActivity : AppCompatActivity() {
             var counter = 0
             var offset = 0
             for ((index, cell) in cello.withIndex()) {
-                Log.d("TAG", "$counter")
                 if (counter != 0) {
                     findViewById<ImageView>(cell).setImageResource(0)
                     counter -= 1
@@ -129,13 +128,65 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val qwerty = findViewById(R.id.c2) as ImageView
-
-        // set on-click listener
-        qwerty.setOnClickListener {
-            // your code to perform when the user clicks on the ImageView
-            qwerty.setImageResource(white_king)
+        // This defines your touch listener
+        class MyTouchListener : View.OnTouchListener {
+            override fun onTouch(view: View, motionEvent: MotionEvent): Boolean {
+                if (motionEvent.action == MotionEvent.ACTION_DOWN) {
+                    val view = view as ImageView
+                    val data = ClipData.newPlainText("", "")
+                    val shadowBuilder = View.DragShadowBuilder(
+                        view
+                    )
+                    view.startDrag(data, shadowBuilder, view, 0)
+//                    view.setImageResource(0)
+                    return true
+                } else {
+                    return false
+                }
+            }
         }
+
+        class MyDragListener : View.OnDragListener {
+            override fun onDrag(v: View, event: DragEvent): Boolean {
+                val container = v as ImageView
+                val view = event.localState as ImageView
+                when (event.action) {
+                    DragEvent.ACTION_DRAG_STARTED -> {
+                    }
+//                    DragEvent.ACTION_DRAG_ENTERED -> container.setImageResource(0)
+                    DragEvent.ACTION_DRAG_EXITED -> {
+                    }
+                    DragEvent.ACTION_DROP -> {
+                        // Dropped, reassign View to ViewGroup
+//                        val owner = view.parent as ViewGroup
+                        Log.d("TAG", "${view.drawable}")
+                        container.setImageDrawable(view.drawable)
+
+                    }
+                    DragEvent.ACTION_DRAG_ENDED -> {
+                        view.setImageResource(0)}
+                    else -> {
+                    }
+                }// do nothing
+                return true
+            }
+        }
+
+        for (cell in cells){
+            findViewById<ImageView>(cell).setOnTouchListener(MyTouchListener())
+            findViewById<ImageView>(cell).setOnDragListener(MyDragListener())
+        }
+//        val qwerty = findViewById(R.id.c2) as ImageView
+//        val qwerty1 = findViewById(R.id.c3) as ImageView
+//
+//        qwerty.setOnTouchListener(MyTouchListener())
+//        qwerty1.setOnDragListener(MyDragListener())
+//
+//        // set on-click listener
+//        qwerty.setOnClickListener {
+//            // your code to perform when the user clicks on the ImageView
+//            qwerty.setImageResource(white_king)
+//        }
 
     }
 
